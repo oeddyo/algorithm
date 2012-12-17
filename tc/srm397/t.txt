@@ -1,0 +1,61 @@
+i, w, ns 0 0 1
+i, w, ns 0 0 2
+i, w, ns 0 2 3
+i, w, ns 0 0 4
+i, w, ns 0 2 5
+i, w, ns 0 2 6
+i, w, ns 0 0 8
+i, w, ns 0 2 9
+i, w, ns 0 2 10
+i, w, ns 0 2 12
+i, w, ns 0 0 16
+i, w, ns 0 2 17
+i, w, ns 0 2 18
+i, w, ns 0 2 20
+i, w, ns 0 2 24
+Time: 0.013592 seconds
+Desired answer: 
+	4
+Your answer: 
+	2
+DOESN'T MATCH!!!!
+
+i, w, ns 0 0 1
+i, w, ns 0 0 2
+i, w, ns 0 1 3
+i, w, ns 0 0 4
+i, w, ns 0 0 8
+i, w, ns 0 1 9
+i, w, ns 0 3 10
+i, w, ns 0 0 16
+i, w, ns 0 1 17
+Time: 0.001784 seconds
+Desired answer: 
+	4
+Your answer: 
+	2
+DOESN'T MATCH!!!!
+
+i, w, ns 0 0 1
+i, w, ns 0 0 2
+i, w, ns 0 0 4
+i, w, ns 0 6 6
+i, w, ns 0 0 8
+i, w, ns 0 7 9
+i, w, ns 0 6 10
+i, w, ns 0 6 12
+Time: 0.001847 seconds
+Desired answer: 
+	4
+Your answer: 
+	2
+DOESN'T MATCH!!!!
+
+Time: 0.001618 seconds
+Desired answer: 
+	0
+Your answer: 
+	0
+Match :-)
+
+Some of the test cases had errors.

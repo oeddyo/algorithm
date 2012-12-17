@@ -1,0 +1,103 @@
+from 0000 to 0001from 0 to 1
+now dp[ns] is 0
+from 0000 to 0010from 0 to 2
+now dp[ns] is 0
+from 0000 to 0100from 0 to 4
+now dp[ns] is 0
+from 0000 to 1000from 0 to 8
+now dp[ns] is 0
+from 0000 to 0011from 0 to 3
+now dp[ns] is 0.333333
+from 0000 to 0110from 0 to 6
+now dp[ns] is 0.333333
+from 0000 to 1100from 0 to 12
+now dp[ns] is 0.333333
+from 0001 to 0011from 1 to 3
+now dp[ns] is 0.333333
+from 0001 to 0101from 1 to 5
+now dp[ns] is 0
+from 0001 to 1001from 1 to 9
+now dp[ns] is 0
+from 0001 to 0111from 1 to 7
+now dp[ns] is 0
+from 0001 to 1101from 1 to 13
+now dp[ns] is 0
+from 0010 to 0011from 2 to 3
+now dp[ns] is 0.333333
+from 0010 to 0110from 2 to 6
+now dp[ns] is 0.333333
+from 0010 to 1010from 2 to 10
+now dp[ns] is 0
+from 0010 to 1110from 2 to 14
+now dp[ns] is 0
+from 0011 to 0111from 3 to 7
+now dp[ns] is 0
+from 0011 to 1011from 3 to 11
+now dp[ns] is 0
+from 0011 to 1111from 3 to 15
+now dp[ns] is 0.333333
+from 0100 to 0101from 4 to 5
+now dp[ns] is 0
+from 0100 to 0110from 4 to 6
+now dp[ns] is 0.333333
+from 0100 to 1100from 4 to 12
+now dp[ns] is 0.333333
+from 0100 to 0111from 4 to 7
+now dp[ns] is 0
+from 0101 to 0111from 5 to 7
+now dp[ns] is 0
+from 0101 to 1101from 5 to 13
+now dp[ns] is 0
+adding to state 0101 0
+from 0110 to 0111from 6 to 7
+now dp[ns] is 0
+from 0110 to 1110from 6 to 14
+now dp[ns] is 0
+adding to state 0110 0.666667
+from 0111 to 1111from 7 to 15
+now dp[ns] is 0.333333
+adding to state 0111 0
+from 1000 to 1001from 8 to 9
+now dp[ns] is 0
+from 1000 to 1010from 8 to 10
+now dp[ns] is 0
+from 1000 to 1100from 8 to 12
+now dp[ns] is 0.333333
+from 1000 to 1011from 8 to 11
+now dp[ns] is 0
+from 1000 to 1110from 8 to 14
+now dp[ns] is 0
+from 1001 to 1011from 9 to 11
+now dp[ns] is 0
+from 1001 to 1101from 9 to 13
+now dp[ns] is 0
+from 1001 to 1111from 9 to 15
+now dp[ns] is 0.333333
+from 1010 to 1011from 10 to 11
+now dp[ns] is 0
+from 1010 to 1110from 10 to 14
+now dp[ns] is 0
+adding to state 1010 0
+from 1011 to 1111from 11 to 15
+now dp[ns] is 0.333333
+adding to state 1011 0
+from 1100 to 1101from 12 to 13
+now dp[ns] is 0
+from 1100 to 1110from 12 to 14
+now dp[ns] is 0
+from 1100 to 1111from 12 to 15
+now dp[ns] is 0.666667
+from 1101 to 1111from 13 to 15
+now dp[ns] is 0.666667
+adding to state 1101 0
+from 1110 to 1111from 14 to 15
+now dp[ns] is 0.666667
+adding to state 1110 0
+adding to state 1111 2.66667
+Time: 0.001051 seconds
+Desired answer: 
+	3.33333
+Your answer: 
+	19.3333
+DOESN'T MATCH!!!!
+

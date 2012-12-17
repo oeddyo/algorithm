@@ -1,0 +1,18 @@
+1 2 2 
+now at 1 dp value is 2
+now at 0 dp value is 1
+now at -7619 dp value is 1
+now at -7630 dp value is 1
+now at -7650 dp value is 1
+now at -7657 dp value is 1
+now at -7677 dp value is 1
+now at -7697 dp value is 1
+now at -7717 dp value is 1
+now at -7737 dp value is 1
+now at -7757 dp value is 1
+now at -7777 dp value is 1
+now at -7815 dp value is 1
+now at -7835 dp value is 1
+now at -7855 dp value is 1
+now at -7875 dp value is 1
+now at -7915 dp value is 1

@@ -1,0 +1,691 @@
+Test 0: [{"000","000","000"},{"ABD","BAC","DCA"},{"ABD","BAC","DCA"}]
+0	
+1	
+2	
+
+ok pos = 0 vis[pos]= 0
+at 0
+seeing 0 vis[i] = 1 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 0
+seeing 2 vis[i] = 0 kingdom[pos][i] = 0
+ok pos = 1 vis[pos]= 0
+at 1
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 1 kingdom[pos][i] = 0
+seeing 2 vis[i] = 0 kingdom[pos][i] = 0
+ok pos = 2 vis[pos]= 0
+at 2
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 0
+seeing 2 vis[i] = 1 kingdom[pos][i] = 0
+0 destroyed
+cluster_id = 3
+haha
+haha
+haha
+graph g is like 
+0 1 1
+0 3 2
+1 1 0
+1 2 2
+2 3 0
+2 2 1
+building 0-> 1 3
+3
+Time: 0.000165 seconds
+Desired answer:
+	3
+Your answer:
+	0
+DOESN'T MATCH!!!!
+
+Test 1: [{"011","101","110"},{"ABD","BAC","DCA"},{"ABD","BAC","DCA"}]
+0	1	2	
+
+ok pos = 0 vis[pos]= 0
+at 0
+seeing 0 vis[i] = 1 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[0][1] = B -1
+seeing 2 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[0][2] = D -3
+ok pos = 2 vis[pos]= 0
+at 2
+seeing 0 vis[i] = 1 kingdom[pos][i] = 1
+seeing 1 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[2][1] = C -2
+seeing 2 vis[i] = 1 kingdom[pos][i] = 0
+ok pos = 1 vis[pos]= 0
+at 1
+seeing 0 vis[i] = 1 kingdom[pos][i] = 1
+seeing 1 vis[i] = 1 kingdom[pos][i] = 0
+seeing 2 vis[i] = 1 kingdom[pos][i] = 1
+ok pos = 1 vis[pos]= 1
+1 destroyed
+cluster_id = 1
+graph g is like 
+0 1 1
+0 3 2
+1 1 0
+1 2 2
+2 3 0
+2 2 1
+building 0-> 1 3
+3
+Time: 0.000129 seconds
+Desired answer:
+	1
+Your answer:
+	0
+DOESN'T MATCH!!!!
+
+Test 2: [{"011000","101000","110000","000011","000101","000110"},{"ABDFFF","BACFFF","DCAFFF","FFFABD","FFFBAC","FFFDCA"},{"ABDFFF","BACFFF","DCAFFF","FFFABD","FFFBAC","FFFDCA"}]
+0	1	2	
+3	4	5	
+
+ok pos = 0 vis[pos]= 0
+at 0
+seeing 0 vis[i] = 1 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[0][1] = B -1
+seeing 2 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[0][2] = D -3
+seeing 3 vis[i] = 0 kingdom[pos][i] = 0
+seeing 4 vis[i] = 0 kingdom[pos][i] = 0
+seeing 5 vis[i] = 0 kingdom[pos][i] = 0
+ok pos = 2 vis[pos]= 0
+at 2
+seeing 0 vis[i] = 1 kingdom[pos][i] = 1
+seeing 1 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[2][1] = C -2
+seeing 2 vis[i] = 1 kingdom[pos][i] = 0
+seeing 3 vis[i] = 0 kingdom[pos][i] = 0
+seeing 4 vis[i] = 0 kingdom[pos][i] = 0
+seeing 5 vis[i] = 0 kingdom[pos][i] = 0
+ok pos = 1 vis[pos]= 0
+at 1
+seeing 0 vis[i] = 1 kingdom[pos][i] = 1
+seeing 1 vis[i] = 1 kingdom[pos][i] = 0
+seeing 2 vis[i] = 1 kingdom[pos][i] = 1
+seeing 3 vis[i] = 0 kingdom[pos][i] = 0
+seeing 4 vis[i] = 0 kingdom[pos][i] = 0
+seeing 5 vis[i] = 0 kingdom[pos][i] = 0
+ok pos = 1 vis[pos]= 1
+ok pos = 3 vis[pos]= 0
+at 3
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 0
+seeing 2 vis[i] = 0 kingdom[pos][i] = 0
+seeing 3 vis[i] = 1 kingdom[pos][i] = 0
+seeing 4 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[3][4] = B -1
+seeing 5 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[3][5] = D -3
+ok pos = 5 vis[pos]= 0
+at 5
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 0
+seeing 2 vis[i] = 0 kingdom[pos][i] = 0
+seeing 3 vis[i] = 1 kingdom[pos][i] = 1
+seeing 4 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[5][4] = C -2
+seeing 5 vis[i] = 1 kingdom[pos][i] = 0
+ok pos = 4 vis[pos]= 0
+at 4
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 0
+seeing 2 vis[i] = 0 kingdom[pos][i] = 0
+seeing 3 vis[i] = 1 kingdom[pos][i] = 1
+seeing 4 vis[i] = 1 kingdom[pos][i] = 0
+seeing 5 vis[i] = 1 kingdom[pos][i] = 1
+ok pos = 4 vis[pos]= 1
+2 destroyed
+cluster_id = 2
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+graph g is like 
+0 1 1
+0 3 2
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+1 1 0
+1 2 2
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+2 3 0
+2 2 1
+building 0-> 1 3
+building 0-> 2 5
+building 0-> 3 5
+building 0-> 4 5
+building 0-> 5 5
+building 0-> 6 5
+building 0-> 7 5
+building 0-> 8 5
+building 0-> 9 5
+building 0-> 10 5
+building 1-> 2 5
+building 1-> 3 5
+building 1-> 4 5
+building 1-> 5 5
+building 1-> 6 5
+building 1-> 7 5
+building 1-> 8 5
+building 1-> 9 5
+building 1-> 10 5
+48
+Time: 0.000458 seconds
+Desired answer:
+	7
+Your answer:
+	0
+DOESN'T MATCH!!!!
+
+Test 3: [{"0"},{"A"},{"A"}]
+0	
+
+ok pos = 0 vis[pos]= 0
+at 0
+seeing 0 vis[i] = 1 kingdom[pos][i] = 0
+0 destroyed
+cluster_id = 1
+graph g is like 
+0 1 1
+0 3 2
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+1 1 0
+1 2 2
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+2 3 0
+2 2 1
+building 0-> 1 3
+building 0-> 2 5
+building 0-> 3 5
+building 0-> 4 5
+building 0-> 5 5
+building 0-> 6 5
+building 0-> 7 5
+building 0-> 8 5
+building 0-> 9 5
+building 0-> 10 5
+building 1-> 2 5
+building 1-> 3 5
+building 1-> 4 5
+building 1-> 5 5
+building 1-> 6 5
+building 1-> 7 5
+building 1-> 8 5
+building 1-> 9 5
+building 1-> 10 5
+48
+Time: 0.000197 seconds
+Desired answer:
+	0
+Your answer:
+	0
+Match :-)
+
+Test 4: [{"0001","0001","0001","1110"},{"AfOj","fAcC","OcAP","jCPA"},{"AWFH","WAxU","FxAV","HUVA"}]
+0	3	1	2	
+
+ok pos = 0 vis[pos]= 0
+at 0
+seeing 0 vis[i] = 1 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 0
+seeing 2 vis[i] = 0 kingdom[pos][i] = 0
+seeing 3 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[0][3] = H -7
+ok pos = 3 vis[pos]= 0
+at 3
+seeing 0 vis[i] = 1 kingdom[pos][i] = 1
+seeing 1 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[3][1] = U -20
+seeing 2 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[3][2] = V -21
+seeing 3 vis[i] = 1 kingdom[pos][i] = 0
+ok pos = 2 vis[pos]= 0
+at 2
+seeing 0 vis[i] = 1 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 0
+seeing 2 vis[i] = 1 kingdom[pos][i] = 0
+seeing 3 vis[i] = 1 kingdom[pos][i] = 1
+ok pos = 1 vis[pos]= 0
+at 1
+seeing 0 vis[i] = 1 kingdom[pos][i] = 0
+seeing 1 vis[i] = 1 kingdom[pos][i] = 0
+seeing 2 vis[i] = 1 kingdom[pos][i] = 0
+seeing 3 vis[i] = 1 kingdom[pos][i] = 1
+0 destroyed
+cluster_id = 1
+graph g is like 
+0 1 1
+0 3 2
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+1 1 0
+1 2 2
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+2 3 0
+2 2 1
+building 0-> 1 3
+building 0-> 2 5
+building 0-> 3 5
+building 0-> 4 5
+building 0-> 5 5
+building 0-> 6 5
+building 0-> 7 5
+building 0-> 8 5
+building 0-> 9 5
+building 0-> 10 5
+building 1-> 2 5
+building 1-> 3 5
+building 1-> 4 5
+building 1-> 5 5
+building 1-> 6 5
+building 1-> 7 5
+building 1-> 8 5
+building 1-> 9 5
+building 1-> 10 5
+48
+Time: 0.000275 seconds
+Desired answer:
+	0
+Your answer:
+	0
+Match :-)
+
+Test 5: [{"0000000000","0000000011","0001010000","0010010000","0000001000","0011000000","0000100000","0000000011","0100000101","0100000110"},{"AhPEqkSFMM","hAfKPtsDad","PfAyGQkaqN","EKyAeLpRpm","qPGeASfNwo","ktQLSAnCAK","SskpfnAdJS","FDaRNCdAZz","MaqpwAJZAn","MdNmoKSznA"},{"AgTqWWxEYH","gAXPgjzIRA","TXAleTmWvT","qPlAQkwxRO","WgeQAqgbJJ","WjTkqAiTzl","xzmwgiAuHb","EIWxbTuAwk","YRvRJzHwAn","HATOJlbknA"}]
+0	
+1	8	7	9	
+2	3	5	
+4	6	
+
+ok pos = 0 vis[pos]= 0
+at 0
+seeing 0 vis[i] = 1 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 0
+seeing 2 vis[i] = 0 kingdom[pos][i] = 0
+seeing 3 vis[i] = 0 kingdom[pos][i] = 0
+seeing 4 vis[i] = 0 kingdom[pos][i] = 0
+seeing 5 vis[i] = 0 kingdom[pos][i] = 0
+seeing 6 vis[i] = 0 kingdom[pos][i] = 0
+seeing 7 vis[i] = 0 kingdom[pos][i] = 0
+seeing 8 vis[i] = 0 kingdom[pos][i] = 0
+seeing 9 vis[i] = 0 kingdom[pos][i] = 0
+ok pos = 1 vis[pos]= 0
+at 1
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 1 kingdom[pos][i] = 0
+seeing 2 vis[i] = 0 kingdom[pos][i] = 0
+seeing 3 vis[i] = 0 kingdom[pos][i] = 0
+seeing 4 vis[i] = 0 kingdom[pos][i] = 0
+seeing 5 vis[i] = 0 kingdom[pos][i] = 0
+seeing 6 vis[i] = 0 kingdom[pos][i] = 0
+seeing 7 vis[i] = 0 kingdom[pos][i] = 0
+seeing 8 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[1][8] = R -17
+seeing 9 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[1][9] = A 0
+ok pos = 8 vis[pos]= 0
+at 8
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 1 kingdom[pos][i] = 1
+seeing 2 vis[i] = 0 kingdom[pos][i] = 0
+seeing 3 vis[i] = 0 kingdom[pos][i] = 0
+seeing 4 vis[i] = 0 kingdom[pos][i] = 0
+seeing 5 vis[i] = 0 kingdom[pos][i] = 0
+seeing 6 vis[i] = 0 kingdom[pos][i] = 0
+seeing 7 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[8][7] = w -48
+seeing 8 vis[i] = 1 kingdom[pos][i] = 0
+seeing 9 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[8][9] = n -39
+ok pos = 7 vis[pos]= 0
+at 7
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 1 kingdom[pos][i] = 0
+seeing 2 vis[i] = 0 kingdom[pos][i] = 0
+seeing 3 vis[i] = 0 kingdom[pos][i] = 0
+seeing 4 vis[i] = 0 kingdom[pos][i] = 0
+seeing 5 vis[i] = 0 kingdom[pos][i] = 0
+seeing 6 vis[i] = 0 kingdom[pos][i] = 0
+seeing 7 vis[i] = 1 kingdom[pos][i] = 0
+seeing 8 vis[i] = 1 kingdom[pos][i] = 1
+seeing 9 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[7][9] = k -36
+ok pos = 9 vis[pos]= 0
+at 9
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 1 kingdom[pos][i] = 1
+seeing 2 vis[i] = 0 kingdom[pos][i] = 0
+seeing 3 vis[i] = 0 kingdom[pos][i] = 0
+seeing 4 vis[i] = 0 kingdom[pos][i] = 0
+seeing 5 vis[i] = 0 kingdom[pos][i] = 0
+seeing 6 vis[i] = 0 kingdom[pos][i] = 0
+seeing 7 vis[i] = 1 kingdom[pos][i] = 1
+seeing 8 vis[i] = 1 kingdom[pos][i] = 1
+seeing 9 vis[i] = 1 kingdom[pos][i] = 0
+ok pos = 9 vis[pos]= 1
+ok pos = 9 vis[pos]= 1
+ok pos = 2 vis[pos]= 0
+at 2
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 0
+seeing 2 vis[i] = 1 kingdom[pos][i] = 0
+seeing 3 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[2][3] = l -37
+seeing 4 vis[i] = 0 kingdom[pos][i] = 0
+seeing 5 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[2][5] = T -19
+seeing 6 vis[i] = 0 kingdom[pos][i] = 0
+seeing 7 vis[i] = 0 kingdom[pos][i] = 0
+seeing 8 vis[i] = 0 kingdom[pos][i] = 0
+seeing 9 vis[i] = 0 kingdom[pos][i] = 0
+ok pos = 3 vis[pos]= 0
+at 3
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 0
+seeing 2 vis[i] = 1 kingdom[pos][i] = 1
+seeing 3 vis[i] = 1 kingdom[pos][i] = 0
+seeing 4 vis[i] = 0 kingdom[pos][i] = 0
+seeing 5 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[3][5] = k -36
+seeing 6 vis[i] = 0 kingdom[pos][i] = 0
+seeing 7 vis[i] = 0 kingdom[pos][i] = 0
+seeing 8 vis[i] = 0 kingdom[pos][i] = 0
+seeing 9 vis[i] = 0 kingdom[pos][i] = 0
+ok pos = 5 vis[pos]= 0
+at 5
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 0
+seeing 2 vis[i] = 1 kingdom[pos][i] = 1
+seeing 3 vis[i] = 1 kingdom[pos][i] = 1
+seeing 4 vis[i] = 0 kingdom[pos][i] = 0
+seeing 5 vis[i] = 1 kingdom[pos][i] = 0
+seeing 6 vis[i] = 0 kingdom[pos][i] = 0
+seeing 7 vis[i] = 0 kingdom[pos][i] = 0
+seeing 8 vis[i] = 0 kingdom[pos][i] = 0
+seeing 9 vis[i] = 0 kingdom[pos][i] = 0
+ok pos = 5 vis[pos]= 1
+ok pos = 4 vis[pos]= 0
+at 4
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 0
+seeing 2 vis[i] = 0 kingdom[pos][i] = 0
+seeing 3 vis[i] = 0 kingdom[pos][i] = 0
+seeing 4 vis[i] = 1 kingdom[pos][i] = 0
+seeing 5 vis[i] = 0 kingdom[pos][i] = 0
+seeing 6 vis[i] = 0 kingdom[pos][i] = 1
+ adding destroy[4][6] = g -32
+seeing 7 vis[i] = 0 kingdom[pos][i] = 0
+seeing 8 vis[i] = 0 kingdom[pos][i] = 0
+seeing 9 vis[i] = 0 kingdom[pos][i] = 0
+ok pos = 6 vis[pos]= 0
+at 6
+seeing 0 vis[i] = 0 kingdom[pos][i] = 0
+seeing 1 vis[i] = 0 kingdom[pos][i] = 0
+seeing 2 vis[i] = 0 kingdom[pos][i] = 0
+seeing 3 vis[i] = 0 kingdom[pos][i] = 0
+seeing 4 vis[i] = 1 kingdom[pos][i] = 1
+seeing 5 vis[i] = 0 kingdom[pos][i] = 0
+seeing 6 vis[i] = 1 kingdom[pos][i] = 0
+seeing 7 vis[i] = 0 kingdom[pos][i] = 0
+seeing 8 vis[i] = 0 kingdom[pos][i] = 0
+seeing 9 vis[i] = 0 kingdom[pos][i] = 0
+55 destroyed
+cluster_id = 4
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+haha
+graph g is like 
+0 1 1
+0 3 2
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 5 1
+0 33 1
+0 12 1
+0 5 1
+0 12 1
+0 15 2
+0 4 2
+0 36 2
+0 42 3
+0 18 3
+1 1 0
+1 2 2
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 5 0
+1 33 0
+1 12 0
+1 5 0
+1 12 0
+1 31 2
+1 10 2
+1 45 2
+1 42 2
+1 41 2
+1 0 2
+1 26 2
+1 17 2
+1 2 2
+1 13 2
+1 38 2
+1 10 2
+1 15 3
+1 44 3
+1 48 3
+1 9 3
+1 13 3
+1 29 3
+1 40 3
+1 18 3
+2 3 0
+2 2 1
+2 15 0
+2 4 0
+2 36 0
+2 31 1
+2 10 1
+2 45 1
+2 42 1
+2 41 1
+2 0 1
+2 26 1
+2 17 1
+2 2 1
+2 13 1
+2 38 1
+2 10 1
+2 6 3
+2 36 3
+2 30 3
+2 41 3
+2 18 3
+2 39 3
+building 0-> 1 3
+building 0-> 2 5
+building 0-> 3 5
+building 0-> 4 5
+building 0-> 5 5
+building 0-> 6 5
+building 0-> 7 5
+building 0-> 8 5
+building 0-> 9 5
+building 0-> 10 5
+building 0-> 11 33
+building 0-> 12 12
+building 0-> 13 5
+building 0-> 14 12
+building 0-> 15 15
+building 0-> 16 4
+building 0-> 17 36
+building 0-> 18 42
+building 0-> 19 18
+building 1-> 2 5
+building 1-> 3 5
+building 1-> 4 5
+building 1-> 5 5
+building 1-> 6 5
+building 1-> 7 5
+building 1-> 8 5
+building 1-> 9 5
+building 1-> 10 5
+building 1-> 11 33
+building 1-> 12 12
+building 1-> 13 5
+building 1-> 14 12
+building 1-> 15 31
+building 1-> 16 10
+building 1-> 17 45
+building 1-> 18 42
+building 1-> 19 41
+building 1-> 20 0
+building 1-> 21 26
+building 1-> 22 17
+building 1-> 23 2
+building 1-> 24 13
+building 1-> 25 38
+building 1-> 26 10
+building 1-> 27 15
+building 1-> 28 44
+building 1-> 29 48
+building 1-> 30 9
+building 1-> 31 13
+building 1-> 32 29
+building 1-> 33 40
+building 1-> 34 18
+building 2-> 3 4
+building 2-> 4 36
+building 2-> 5 31
+building 2-> 6 10
+building 2-> 7 45
+building 2-> 8 42
+building 2-> 9 41
+building 2-> 10 0
+building 2-> 11 26
+building 2-> 12 17
+building 2-> 13 2
+building 2-> 14 13
+building 2-> 15 38
+building 2-> 17 6
+building 2-> 18 36
+building 2-> 19 30
+building 2-> 21 18
+building 2-> 22 39
+building 3-> 4 48
+building 3-> 5 9
+building 3-> 6 13
+building 3-> 7 29
+building 3-> 8 40
+building 3-> 9 18
+building 3-> 11 36
+building 3-> 12 30
+building 3-> 14 18
+building 3-> 15 39
+487
+Time: 0.001201 seconds
+Desired answer:
+	65
+Your answer:
+	0
+DOESN'T MATCH!!!!
+
+Some of the test cases had errors.
