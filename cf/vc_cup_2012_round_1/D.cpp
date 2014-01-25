@@ -6,55 +6,52 @@ using namespace std;
 typedef long long int ll;
 
 const int MAXN = 50001;
-//ll dp[MAXN][501];
+ll dp[MAXN][501];
 vector<int> G[MAXN];
 int N,K;
 
-ll get_ans(int p, int k, int pre){
+ll get_ans(int p, int k){
     //cout<<"into "<<p<<" "<<k<<endl;
-    /*
+    if(k==0){
+        dp[p][k] = 1;
+        return 1;
+    }
     if(dp[p][k]!=-1){
         cout<<p<<" "<<k<<" already = "<<dp[p][k]<<endl;
         return dp[p][k];
     }
-    */
-    if(k==0){
-        //cout<<"at "<<p<<" "<<k<<" return 1"<<endl;
-        //dp[p][k] = 1;
-        return 1;
-    }
-
+    
     ll tmp_ans = 0;
     for(int i=0; i<G[p].size(); i++){
-        if(G[p][i]!=pre){    
-            tmp_ans += get_ans(G[p][i], k-1, p);
+        int u = G[p][i];
+        for(int x=1; x<k; x++){
+            ll ta,tb,tc;
+            ta = get_ans(u, x-1);
+            tb = get_ans(p, k-x);
+            tc = get_ans(u, k-x-1);
+            tmp_ans += ta*(tb - tc);
+            //tmp_ans+=dp[u][x-1]*(dp[p][k-x] - dp[u][k-x-1]); 
         }
-
+        //tmp_ans += get_ans(G[p][i], k-1, p);
     }
-    /*
-    if(pre!=-1){
-        tmp_ans -= dp[pre][k-1];
-    }
-    */
-
-    //dp[p][k] = tmp_ans;
-    return tmp_ans;
+    cout<<"tmp = "<<tmp_ans<<endl;
+    dp[p][k] = tmp_ans/2;
+    return dp[p][k];
 }
 
 
 void work(){
     ll ans = 0;
     for(int i=1; i<=N; i++){
-        //cout<<"begin "<<i<<endl;
-        ans += get_ans(i, K, -1);
+        ans += get_ans(i, K);
     }
-    cout<<ans/2<<endl;
+    cout<<ans<<endl;
 }
 
 int main(){
     for(int i=0; i<MAXN; i++){
         for(int j=0; j<500; j++){
-            //dp[i][j] = -1;
+            dp[i][j] = -1;
         }
     }
 
