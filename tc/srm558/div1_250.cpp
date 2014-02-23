@@ -19,12 +19,92 @@
 #include <ctime>
 
 using namespace std;
-
-
+const int INF = 999999999;
+const int MAXN = 100;
+int dp[MAXN];
+int r_color[MAXN];
 class Stamp {
     public:
-        int getMinimumCost(string desiredColor, int stampCost, int pushCost) {
+        int idx(char c){
+            if(c=='R')return 0;
+            if(c=='G')return 1;
+            if(c=='B')return 2;
+            return 3;
+        }
+
+        int should_paint(string desiredColor, int s, int e){
+            int cnt[3] = {0, 0, 0};
+            for(int i=s; i<e; i++){
+                if(idx(desiredColor[i])!=3)
+                    cnt[idx(desiredColor[i])] += 1;
+            }
+            int d_c = 0;
+            int p = -1;
+            for(int i=0; i<3; i++)
+                if(cnt[i]>0){
+                    p=i; d_c += 1;
+                }
+            if(d_c >= 2)return -1;
+            if(p==-1){
+                return 0;
+            }
+            return p;
+        }
+
+        int min_cost(string desiredColor, int L, int pushCost){
+            for(int i=0; i<MAXN; i++)dp[i] = INF;
+            int sz = desiredColor.size();
             
+            if(L>sz)return -1;
+            //if(should_paint(desiredColor, 0, L)==-1)return -1;
+            //dp[0] = pushCost;
+
+            dp[0] = 0;
+            int pre_color = -1;
+            for(int i=0; i<sz; i++){
+                if(dp[i]==INF)continue;
+                if(i+L>sz)continue;
+
+                cout<<"dp["<<i<<"] = "<<dp[i]<<endl;
+                bool ok = true;
+                int color = should_paint(desiredColor, i, i+L);
+                if(color == -1){
+                    cout<<"bad"<<endl;
+                    continue;
+                }
+                
+                for(int j=i+1; j<=i+L; j++){
+                    dp[j] = min(dp[j], dp[i] + pushCost);
+                }
+                //dp[i+L] = min(dp[i+L], dp[i]+pushCost);
+            }
+            if(dp[sz]!=INF)
+                return dp[sz] ;
+            return -1;
+        }
+
+        int getMinimumCost(string desiredColor, int stampCost, int pushCost) {
+            int ans = INF;
+            
+            int ttt = min_cost(desiredColor, 2, pushCost);
+            cout<<"ttt = "<<ttt<<endl;
+            /*
+            for(int i=1; i<=desiredColor.size(); i++){
+                int L = i;
+                
+                int paint = min_cost(desiredColor, L, pushCost);
+                int paint2 = min_cost(string(desiredColor.rbegin(), desiredColor.rend()), L, pushCost);
+
+                if(paint == -1 && paint2 == -1){
+                    continue;
+                }else{
+                    ans = min(ans, min(paint,paint2) + L*stampCost);
+                    cout<<"here = "<<L<<endl;
+                }
+            }
+            */ 
+            if(ans==INF)return -1;
+            return ans;
         }
 };
 
@@ -73,17 +153,16 @@ int main() {
     int p1;
     int p2;
     int p3;
-
     {
         // ----- test 0 -----
-        p0 = "RRGGBB";
+        p0 = "RR*GG";
         p1 = 1;
-        p2 = 1;
-        p3 = 5;
+        p2 = 100000;
+        p3 = 300002;
         all_right = KawigiEdit_RunTest(0, p0, p1, p2, true, p3) && all_right;
         // ------------------
     }
-
+    /*
     {
         // ----- test 1 -----
         p0 = "R**GB*";
@@ -93,7 +172,7 @@ int main() {
         all_right = KawigiEdit_RunTest(1, p0, p1, p2, true, p3) && all_right;
         // ------------------
     }
-
+    
     {
         // ----- test 2 -----
         p0 = "BRRB";
@@ -103,7 +182,7 @@ int main() {
         all_right = KawigiEdit_RunTest(2, p0, p1, p2, true, p3) && all_right;
         // ------------------
     }
-
+    
     {
         // ----- test 3 -----
         p0 = "R*RR*GG";
@@ -123,7 +202,6 @@ int main() {
         all_right = KawigiEdit_RunTest(4, p0, p1, p2, true, p3) && all_right;
         // ------------------
     }
-
     {
         // ----- test 5 -----
         p0 = "*R*RG*G*GR*RGG*G*GGR***RR*GG";
@@ -139,6 +217,8 @@ int main() {
     } else {
         cout << "Some of the test cases had errors." << endl;
     }
+    */
+
     return 0;
 }
 // END KAWIGIEDIT TESTING
