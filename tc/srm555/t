@@ -1,0 +1,143 @@
+Test 0: ["101101101"]
+testing 1
+tmp%5 = 1
+not
+testing 1
+tmp%5 = 1
+not
+testing 5
+tmp%5 = 1
+not
+testing 13
+tmp%5 = 3
+not
+testing 13
+tmp%5 = 3
+not
+testing 45
+tmp%5 = 4
+not
+testing 109
+tmp%5 = 4
+not
+testing 109
+tmp%5 = 4
+not
+testing 365
+tmp%5 = 3
+not
+testing 0
+yes
+1 1
+testing 2
+tmp%5 = 2
+not
+testing 6
+tmp%5 = 1
+not
+testing 6
+tmp%5 = 1
+not
+testing 22
+tmp%5 = 2
+not
+testing 54
+tmp%5 = 4
+not
+testing 54
+tmp%5 = 4
+not
+testing 182
+tmp%5 = 2
+not
+testing 1
+tmp%5 = 1
+not
+testing 3
+tmp%5 = 3
+not
+testing 3
+tmp%5 = 3
+not
+testing 11
+tmp%5 = 1
+not
+testing 27
+tmp%5 = 2
+not
+testing 27
+tmp%5 = 2
+not
+testing 91
+tmp%5 = 1
+not
+testing 1
+tmp%5 = 1
+not
+testing 1
+tmp%5 = 1
+not
+testing 5
+tmp%5 = 1
+not
+testing 13
+tmp%5 = 3
+not
+testing 13
+tmp%5 = 3
+not
+testing 45
+tmp%5 = 4
+not
+testing 0
+yes
+4 4
+testing 2
+tmp%5 = 2
+not
+testing 6
+tmp%5 = 1
+not
+testing 6
+tmp%5 = 1
+not
+testing 22
+tmp%5 = 2
+not
+testing 1
+tmp%5 = 1
+not
+testing 3
+tmp%5 = 3
+not
+testing 3
+tmp%5 = 3
+not
+testing 11
+tmp%5 = 1
+not
+testing 1
+tmp%5 = 1
+not
+testing 1
+tmp%5 = 1
+not
+testing 5
+tmp%5 = 1
+not
+testing 0
+yes
+7 7
+testing 2
+tmp%5 = 2
+not
+testing 1
+tmp%5 = 1
+not
+Time: 0.000633 seconds
+Desired answer:
+	3
+Your answer:
+	-1
+DOESN'T MATCH!!!!
+
