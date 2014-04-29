@@ -1,71 +1,62 @@
+#include <iostream>
+#include <string>
 #include <vector>
+#include <algorithm>
+#include <queue>
 #include <list>
+#include <stack>
 #include <map>
 #include <set>
-#include <deque>
-#include <stack>
-#include <bitset>
-#include <algorithm>
-#include <functional>
-#include <numeric>
-#include <utility>
-#include <sstream>
-#include <iostream>
-#include <iomanip>
-#include <cstdio>
-#include <cmath>
-#include <cstdlib>
-#include <ctime>
-
 using namespace std;
+ 
+#define DEBUG
+#define REP(i,a) for(i=0;i<a;i++)
+#define FOR(i,a,b) for(i=a;i<b;i++)
+#define VE vector<int>
+#define SZ size()
+#define PB push_back
 
-const int MAXN = 100;
+const int MAXN = 1000;
+long long int dp[MAXN][MAXN];
 int N;
-long long int dp[MAXN][MAXN][1<<5];
-void work(){
-    memset(dp,0,sizeof(dp));
-    dp[0][0][1<<2] = 1;
 
-    for(int i=1; i<N; i++){
-        for(int j=0; j<N; j++){
-            for(int k=j-2; k<=j+2; k++){
-                if(k>N ||k==j|| k<0)continue;
-                for(int s=0; s<(1<<5); s++){
-                    if( ((s>>(j+2-k))&1)==1 )continue;
-                    if( dp[i-1][j][s] == 0)continue;
-                    
-                     
-                    int ns = s| (1<<(j+2-k));
-                    if(k>j){
-                        ns = ns<<(k-j);
-                    }else if(k<j){
-                        ns = ns>>(j-k);
-                    }
-                    ns&=31;
-                    dp[i][k][ns] += dp[i-1][j][s];
-                    //cout<<"now adding "<<j<<" to "<<k<<endl;
-                }
+void work(){
+    dp[1][1] = 1;
+    dp[2][2] = 1;
+    dp[2][3] = 1;
+    dp[3][1] = dp[3][2] = dp[3][3] = 1;
+    for(int i=3; i<N; i++){
+        cout<<" i = "<<i<<endl;
+        for(int j=1; j<=N; j++){
+            if(j==i-1){
+                dp[i+1][i+1] += dp[i][j];
+            }else if(j==i){
+                dp[i+1][i+1] += dp[i][j];
+                dp[i+1][i+1+1] += dp[i][j];
+            }else if(j==i+1){
+                dp[i+1][i] += dp[i][j];
             }
         }
     }
-    long long int ans = 0;
-    for(int i=0; i<N; i++){
-        for(int s=0; s<(1<<5); s++){
-            ans+=dp[N-1][i][s];
-            if(dp[N-1][i][s]!=0)
-                cout<<i<<" "<<s<<" "<<dp[N-1][i][s]<<endl;
-        }
-    }
     
+    long long int ans = 0;
+    for(int i=1; i<=N; i++){
+        ans += dp[N][i];
+        cout<<"dp["<<N<<"]["<<i<<"] = "<<dp[N][i]<<endl;
+    }
+
     cout<<ans<<endl;
 
 }
 
+
+
 int main(){
-
+    
     cin>>N;
+    memset(dp, 0, sizeof(dp));
+    
     work();
-
     return 0;
 }
 
