@@ -1,5 +1,6 @@
 #include <vector>
 #include <list>
+#include <string.h>
 #include <map>
 #include <set>
 #include <deque>

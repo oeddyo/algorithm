@@ -1,46 +1,20 @@
 
 
-import random
-import copy
+import math
+
+def get_ending_zero(N):
+    cnt = 0
+    while(N%10==0 and N>0):
+        cnt += 1
+        N/=10
+    return cnt
 
 
 
+for n in range(1, 100):
+    s = 1 + pow(2, n) + pow(3, n) + pow(4, n)
 
-ans = 0
-all_len = 0
-for kk in range(100):
-    s = ""
-    for i in range(255):
-        if random.randint(0, 1):
-            s += '>'
-        else:
-            s += '<'
-    
-    print s
-    all_len += len(s)
-    while True:
-        n_s = ""
-        indexes = iter(range(len(s) ))
-        c_change = 0
-        for i in indexes:
-            if i+1 < len(s) and (s[i] == '>' and s[i+1] == '<'):
-                n_s += '<>'
-                c_change += 1
-                try:
-                    next(indexes)
-                except:
-                    break
-            else:
-                n_s += s[i]
-        
-        if c_change == 0:
-            break
-        s = copy.deepcopy(n_s)
-        ans += c_change
+    #print pow(4, n)%100
+    #print 'n = ', n, 'sum = ', s
+    print get_ending_zero(s)%100
 
-    #print 'ans = ', ans
-    #print s
-
-
-print all_len
-print ans
