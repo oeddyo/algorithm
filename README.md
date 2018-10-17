@@ -4,7 +4,7 @@ Algorithm Problems I solved... as a hobby
 
 # Hiring!
 We are hiring! If you're in Shanghai, or you're a strong code who is fluent in Node.js/JS/Pug and is looking for
-a job/internship, please shot me an email!
+a job/internship, please shot me an email!.We are looking forward to hire people to are interested in open source development and give them opportunities to show their skills
 
 xieke at caowutech dot com
 
