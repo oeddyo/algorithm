@@ -1,10 +1,9 @@
-# algorithm
-Algorithm Problems I solved... as a hobby
+# Algorithms
+I solved these algorithm problems as a hobby.
 
 
-# Hiring!
-We are hiring! If you're in Shanghai, or you're a strong code who is fluent in Node.js/JS/Pug and is looking for
-a job/internship, please shot me an email!
+# We are hiring!
+If you're in Shanghai or a strong coder fluent in Node.js/JS/Pug, shoot us an email! We're providing jobs and internships.
 
 xieke at caowutech dot com
 
